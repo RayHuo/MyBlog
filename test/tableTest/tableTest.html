@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Table Test</title>
+	</head>
+	<body>
+		<table id="food" border="1">
+			<tr>
+				<td>Name</td>
+				<td>Price</td>
+			</tr>
+			<tr>
+				<td>Milk</td>
+				<td>4.00</td>
+			</tr>
+			<tr>
+				<td>Bread</td>
+				<td>3.00</td>
+			</tr>
+			<tr>
+				<td>Rice</td>
+				<td>5.00</td>
+			</tr>
+		</table>
+		<div>
+			<h3 id="jsonData">Null</h3>
+		</div>
+		<script type="text/javascript">
+			var i = 0, j = 0;
+			var table = document.getElementById("food");
+			var size1 = table.rows.length;
+			var size2 = table.rows[0].cells.length;	// 每一行的cells长度都是一样的。
+			for(i = 0; i < size1; i++) {
+				for(j = 0; j < size2; j++) {
+					var p = document.createElement("p");
+					p.innerHTML = table.rows[i].cells[j].innerHTML;
+					table.appendChild(p);
+				}
+			}
+
+			var jsonData = [];
+			var data = {};
+			for(i = 0; i < size1; i++) {
+				data.name = table.rows[i].cells[0].innerHTML;
+				data.value = table.rows[i].cells[1].innerHTML;
+				jsonData.push(data);
+			}
+			var jsonString = JSON.stringify(jsonData);
+			var printJSON = document.getElementById("jsonData");
+			printJSON.innerHTML = jsonString;
+
+		</script>
+	</body>
+</html>
