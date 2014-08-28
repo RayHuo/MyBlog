@@ -40,8 +40,9 @@
 			}
 
 			var jsonData = [];
-			var data = {};
+			
 			for(i = 0; i < size1; i++) {
+				var data = {};		// variable "data" needs to be defined inside the loop
 				data.name = table.rows[i].cells[0].innerHTML;
 				data.value = table.rows[i].cells[1].innerHTML;
 				jsonData.push(data);
