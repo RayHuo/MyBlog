@@ -37,3 +37,8 @@ Article.propotype.getContent = function() {
 	return this.content;
 };
 
+(function() {
+	var art = new Article();
+	art.setTitle = "Hello";
+	art.addContent("Good Day!");
+})();
