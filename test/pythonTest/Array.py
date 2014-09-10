@@ -10,3 +10,4 @@ print arrays.index(2)
 
 arrays.sort()
 print arrays
+print ""
