@@ -3,6 +3,10 @@
 
 using namespace std;
 
+  // what
+  // hell
+  // ifelse
+
 int main() {
     int size = 50000000;
     int sum = 0;
@@ -10,5 +14,6 @@ int main() {
         sum = sum + 1;
     }
 
+    // not that good
     return 0;
 }
